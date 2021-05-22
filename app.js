@@ -1,1 +1,8 @@
-alert('This is a new message');
+let admin;
+let name;
+const EARTH = "Earth";
+name = "John";
+admin = name;
+
+
+alert(admin);

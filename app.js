@@ -4,5 +4,9 @@ const EARTH = "Earth";
 name = "John";
 admin = name;
 
+const MAX = 57;
 
-alert(admin);
+let actual = MAX-13;
+let percentage = actual/MAX;
+let total = (4+6+9)/77;
+alert(percentage);

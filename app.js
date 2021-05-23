@@ -1,12 +1,32 @@
-let admin;
-let name;
-const EARTH = "Earth";
-name = "John";
-admin = name;
+let num;
+let str;
+let sli;
 
-const MAX = 57;
 
-let actual = MAX-13;
-let percentage = actual/MAX;
-let total = (4+6+9)/77;
-alert(percentage);
+
+str="abcdefg";
+num = str.indexOf("b");
+sli = str.slice(-1);
+str = str.replace(/B/i,"t");
+//alert(str + num);
+
+const select = document.querySelector('test');
+const para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'sunny') {
+    para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+  } else {
+    para.textContent = '';
+  }
+}
